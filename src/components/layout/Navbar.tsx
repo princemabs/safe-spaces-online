@@ -23,13 +23,11 @@ export function Navbar() {
             <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-soft group-hover:shadow-hover transition-smooth">
               <Shield className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-heading font-bold text-lg text-foreground">
-              SecuritéNumérique
-            </span>
+            
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1  w-full justify-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -46,12 +44,6 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <Button variant="hero" size="sm" asChild>
-              <Link to="/evaluation">Commencer</Link>
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-muted transition-smooth"
@@ -59,8 +51,17 @@ export function Navbar() {
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+      
+          <div className="md:flex items-center gap-2 hidden">
+            <Button  size="sm" asChild variant="hero-outline">
+              <Link to="/signin">Connexion</Link>
+            </Button>
+            <Button variant="hero" size="sm" asChild>
+              <Link to="/signup">Inscription</Link>
+            </Button>
+          </div>
         </div>
-
+           
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
@@ -80,10 +81,11 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Button variant="hero" className="mt-2" asChild>
-                <Link to="/evaluation" onClick={() => setIsOpen(false)}>
-                  Commencer l'évaluation
-                </Link>
+              <Button variant="hero-outline" size="sm" asChild onClick={() => setIsOpen(false)}>
+                <Link to="/signin">Connexion</Link>
+              </Button>
+              <Button variant="hero" size="sm" asChild onClick={() => setIsOpen(false)}>
+                <Link to="/signup">Insciption</Link>
               </Button>
             </div>
           </div>

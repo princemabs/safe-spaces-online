@@ -19,20 +19,20 @@ export function CTASection() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
-            Prenez le contrôle de votre{" "}
-            <span className="text-gradient">sécurité numérique</span>
+           Soyez le gardien de votre monde numérique {" "} <br/>
+            <span className="text-gradient">grâce à notre chatbot !</span>
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8">
-            En quelques minutes, évaluez vos pratiques actuelles et découvrez
-            comment mieux vous protéger en ligne. C'est gratuit, simple et
-            confidentiel.
+            Laissez notre chatbot vous guider dans l'évaluation
+             de vos pratiques en ligne en quelques minutes. 
+             C'est simple, rapide et entièrement confidentiel !
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/evaluation">
-                Commencer maintenant
+              <Link to="/chat">
+                Lancer la discussion
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>

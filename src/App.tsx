@@ -8,6 +8,7 @@ import Evaluation from "./pages/Evaluation";
 import Parcours from "./pages/Parcours";
 import Quiz from "./pages/Quiz";
 import NotFound from "./pages/NotFound";
+import Guide from "./pages/Guide";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/evaluation" element={<Evaluation />} />
           <Route path="/parcours" element={<Parcours />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
